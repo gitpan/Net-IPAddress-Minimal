@@ -2,7 +2,7 @@ NAME
     Net::IPAddress::Minimal - IP string to number and back
 
 VERSION
-    Version 0.02
+    Version 0.03
 
 SYNOPSIS
     This module converts IPv4 strings to integer IP numbers and vice versa.
@@ -65,7 +65,7 @@ SUBROUTINES/METHODS
 AUTHORS
     Tamir Lousky, "<tlousky at cpan.org>"
 
-    XSawyerX, "<xsawyerx at cpan.org>"
+    SawyerX, "<xsawyerx at cpan.org>"
 
 BUGS
     Please report any bugs or feature requests to "bug-net-ipaddress-minimal

@@ -16,9 +16,9 @@ name: Net-IPAddress-Minimal
 provides:
   Net::IPAddress::Minimal:
     file: lib/Net/IPAddress/Minimal.pm
-    version: 0.02
+    version: 0.03
 requires:
   Exporter: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.02
+version: 0.03
