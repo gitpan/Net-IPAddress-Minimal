@@ -25,5 +25,5 @@ requires:
   Data::Validate::IP: 0
   Exporter: 0
 resources:
-  repository: http://github.com/xsawyerx/net-ipaddress-minimal
-version: 0.04
+  repository: http://github.com/Tlousky/net-ipaddress-minimal
+version: 0.05

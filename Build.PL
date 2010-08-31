@@ -24,7 +24,7 @@ my %module_build_args = (
     'Sawyer X <xsawyerx@cpan.org>'
   ],
   'dist_name' => 'Net-IPAddress-Minimal',
-  'dist_version' => '0.04',
+  'dist_version' => '0.05',
   'license' => 'perl',
   'module_name' => 'Net::IPAddress::Minimal',
   'recommends' => {},
