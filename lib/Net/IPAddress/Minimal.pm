@@ -1,14 +1,16 @@
-package Net::IPAddress::Minimal;
-
 use strict;
 use warnings;
+package Net::IPAddress::Minimal;
+BEGIN {
+  $Net::IPAddress::Minimal::VERSION = '0.04';
+}
+# ABSTRACT: IP string to number and back
 
 use Data::Validate     'is_integer';
 use Data::Validate::IP 'is_ipv4';
 use base 'Exporter';
 
 our @EXPORT_OK = qw( ip_to_num num_to_ip invert_ip );
-our $VERSION   = '0.03';
 
 sub test_string_structure {
     my $string = shift || q{};
@@ -75,7 +77,9 @@ sub invert_ip {
 
 1;
 
-__END__
+
+
+=pod
 
 =head1 NAME
 
@@ -83,7 +87,7 @@ Net::IPAddress::Minimal - IP string to number and back
 
 =head1 VERSION
 
-Version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -129,7 +133,7 @@ Gets an IPv4 string or an IP number and converts it to the other form.
     
     my $ip_num = invert_ip( 180882050 );
     #  $ip_str = '10.200.10.130';
-    
+
 =head2 num_to_ip
 
 Gets an IP number and returns an IPv4 string.
@@ -140,10 +144,6 @@ Gets an IP number and returns an IPv4 string.
 =head2 ip_to_num
 
 Gets a IPv4 string and returns the matching IP number.
-
-B<Note that at the moment this function does not ensure that each of the
-class numbers are between 0-255, and it can return unexpected results
-when misused>
 
     my $ip_num = ip_to_num( '212.212.212.212' );
     #  $ip_num = 3570717908
@@ -195,15 +195,20 @@ L<http://search.cpan.org/dist/Net-IPAddress-Minimal/>
 
 =back
 
-=head1 ACKNOWLEDGEMENTS
+=head1 AUTHORS
 
-=head1 LICENSE AND COPYRIGHT
+  Tamir Lousky <tlousky@cpan.org>
+  Sawyer X <xsawyerx@cpan.org>
 
-Copyright 2010 Tamir Lousky.
+=head1 COPYRIGHT AND LICENSE
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
+This software is copyright (c) 2010 by Tamir Lousky.
 
-See http://dev.perl.org/licenses/ for more information.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
 

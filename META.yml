@@ -2,23 +2,28 @@
 abstract: 'IP string to number and back'
 author:
   - 'Tamir Lousky <tlousky@cpan.org>'
+  - 'Sawyer X <xsawyerx@cpan.org>'
 build_requires:
+  English: 0
+  File::Find: 0
+  File::Temp: 0
+  Module::Build: 0.3601
   Test::Exception: 0
   Test::More: 0
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3607'
+  ExtUtils::MakeMaker: 6.31
+  Module::Build: 0.3601
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.102340, CPAN::Meta::Converter version 2.101591'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Net-IPAddress-Minimal
-provides:
-  Net::IPAddress::Minimal:
-    file: lib/Net/IPAddress/Minimal.pm
-    version: 0.03
 requires:
+  Data::Validate: 0
+  Data::Validate::IP: 0
   Exporter: 0
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.03
+  repository: http://github.com/xsawyerx/net-ipaddress-minimal
+version: 0.04

@@ -2,7 +2,7 @@ NAME
     Net::IPAddress::Minimal - IP string to number and back
 
 VERSION
-    Version 0.03
+    version 0.04
 
 SYNOPSIS
     This module converts IPv4 strings to integer IP numbers and vice versa.
@@ -50,10 +50,6 @@ SUBROUTINES/METHODS
   ip_to_num
     Gets a IPv4 string and returns the matching IP number.
 
-    Note that at the moment this function does not ensure that each of the
-    class numbers are between 0-255, and it can return unexpected results
-    when misused
-
         my $ip_num = ip_to_num( '212.212.212.212' );
         #  $ip_num = 3570717908
 
@@ -97,13 +93,13 @@ SUPPORT
 
         <http://search.cpan.org/dist/Net-IPAddress-Minimal/>
 
-ACKNOWLEDGEMENTS
-LICENSE AND COPYRIGHT
-    Copyright 2010 Tamir Lousky.
+AUTHORS
+      Tamir Lousky <tlousky@cpan.org>
+      Sawyer X <xsawyerx@cpan.org>
 
-    This program is free software; you can redistribute it and/or modify it
-    under the terms of either: the GNU General Public License as published
-    by the Free Software Foundation; or the Artistic License.
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Tamir Lousky.
 
-    See http://dev.perl.org/licenses/ for more information.
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

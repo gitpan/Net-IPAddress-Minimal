@@ -1,21 +1,43 @@
+
 use strict;
 use warnings;
-use Module::Build;
 
-my $builder = Module::Build->new(
-    module_name        => 'Net::IPAddress::Minimal',
-    license            => 'perl',
-    dist_author        => q{Tamir Lousky <tlousky@cpan.org>},
-    dist_version_from  => 'lib/Net/IPAddress/Minimal.pm',
-    build_requires     => {
-        'Test::More'      => 0,
-        'Test::Exception' => 0,
-    },
-    requires           => { Exporter => 0 },
-    add_to_cleanup     => [ 'Net-IPAddress-Minimal-*' ],
-    create_makefile_pl => 'traditional',
-    create_readme      => 1,
-    create_license     => 1,
+use Module::Build 0.3601;
+
+
+my %module_build_args = (
+  'build_requires' => {
+    'English' => '0',
+    'File::Find' => '0',
+    'File::Temp' => '0',
+    'Module::Build' => '0.3601',
+    'Test::Exception' => '0',
+    'Test::More' => '0'
+  },
+  'configure_requires' => {
+    'ExtUtils::MakeMaker' => '6.31',
+    'Module::Build' => '0.3601'
+  },
+  'dist_abstract' => 'IP string to number and back',
+  'dist_author' => [
+    'Tamir Lousky <tlousky@cpan.org>',
+    'Sawyer X <xsawyerx@cpan.org>'
+  ],
+  'dist_name' => 'Net-IPAddress-Minimal',
+  'dist_version' => '0.04',
+  'license' => 'perl',
+  'module_name' => 'Net::IPAddress::Minimal',
+  'recommends' => {},
+  'recursive_test_files' => 1,
+  'requires' => {
+    'Data::Validate' => '0',
+    'Data::Validate::IP' => '0',
+    'Exporter' => '0'
+  },
+  'script_files' => []
 );
 
-$builder->create_build_script();
+
+my $build = Module::Build->new(%module_build_args);
+
+$build->create_build_script;
